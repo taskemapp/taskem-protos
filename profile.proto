@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package profile;
+
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+
+service Profile {
+  rpc AddOrUpdateAvatar(AddOrUpdateAvatarRequest) returns (google.protobuf.Empty) {}
+}
+
+message AddOrUpdateAvatarRequest {
+  bytes avatar_image = 2;
+}
