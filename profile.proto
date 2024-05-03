@@ -6,8 +6,15 @@ import "google/protobuf/empty.proto";
 
 service Profile {
   rpc AddOrUpdateAvatar(AddOrUpdateAvatarRequest) returns (google.protobuf.Empty) {}
+  rpc GetProfile(google.protobuf.Empty) returns (GetProfileResponse) {}
 }
 
 message AddOrUpdateAvatarRequest {
   bytes avatar_image = 2;
+}
+
+message GetProfileResponse {
+  string avatar = 1;
+  string user_name = 2;
+  string email = 3;
 }
