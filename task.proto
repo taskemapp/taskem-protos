@@ -13,6 +13,7 @@ service Task {
     rpc GetAllForUser (google.protobuf.Empty) returns (GetAllResponse);
     rpc Get (GetTaskRequest) returns (TaskResponse);
     rpc Assign (AssignTaskRequest) returns (TaskResponse);
+    rpc Complete (CompleteTaskRequest) returns (google.protobuf.Empty);
 }
 
 message GetTeamTasksRequest {
@@ -33,6 +34,10 @@ message GetTaskRequest {
 message AssignTaskRequest {
     string task_id = 1;
     string user_id = 2;
+}
+
+message CompleteTaskRequest {
+    string task_id = 1;
 }
 
 message TaskResponse {
