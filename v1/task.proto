@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package task;
-option go_package = "taskem.v1.task;auth.v1";
+option go_package = "taskem.v1.task;taskv1";
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";

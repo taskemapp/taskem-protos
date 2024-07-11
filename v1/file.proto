@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package file;
-option go_package = "taskem.v1.file;file.v1";
+option go_package = "taskem.v1.file;filev1";
 
 import "google/protobuf/empty.proto";
 
