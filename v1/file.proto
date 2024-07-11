@@ -1,10 +1,13 @@
 syntax = "proto3";
 
 package file;
+option go_package = "taskem.v1.file;file.v1";
+
+import "google/protobuf/empty.proto";
 
 service FileService {
   rpc UploadFile(UploadFileRequest) returns (UploadFileResponse) {}
-  rpc DeleteFile(DeleteFileRequest) returns (DeleteFileResponse) {}
+  rpc DeleteFile(DeleteFileRequest) returns (google.protobuf.Empty) {}
 }
 
 message UploadFileRequest {
