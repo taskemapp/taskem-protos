@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package profile;
+package v1.profile;
 option go_package = "github.com/taskemapp/taskem-protos/v1";
 
 import "google/protobuf/empty.proto";

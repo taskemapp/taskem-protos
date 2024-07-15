@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package task;
+package v1.task;
 option go_package = "github.com/taskemapp/taskem-protos/v1";
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
-import "team.proto";
+import "v1/team.proto";
 
 service Task {
     rpc Create (CreateTaskRequest) returns (google.protobuf.Empty);
