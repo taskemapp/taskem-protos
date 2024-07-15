@@ -5,7 +5,7 @@ option go_package = "github.com/taskemapp/taskem-protos/v1";
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
-import "protos/v1/team.proto";
+import "v1/team.proto";
 
 service Task {
     rpc Create (CreateTaskRequest) returns (google.protobuf.Empty);
