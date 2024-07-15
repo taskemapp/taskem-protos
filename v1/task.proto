@@ -47,7 +47,7 @@ message TaskResponse {
     string description = 3;
     google.protobuf.Timestamp created_timestamp = 4;
     google.protobuf.Timestamp end_timestamp = 5;
-    repeated team.UserInfo assigned_users = 6;
+    repeated v1.team.UserInfo assigned_users = 6;
     string status = 7;
 }
 
