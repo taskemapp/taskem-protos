@@ -30,8 +30,6 @@ message SignupRequest {
 
 message RefreshTokenRequest {
     string token = 1;
-    string refresh_token = 2;
-    string token_type = 3;
 }
 
 message RefreshTokenResponse {
