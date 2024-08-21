@@ -8,7 +8,7 @@ service Auth {
     rpc SignUp (SignupRequest) returns (google.protobuf.Empty);
     rpc Login (LoginRequest) returns (LoginResponse);
     rpc Logout (google.protobuf.Empty) returns (google.protobuf.Empty);
-    rpc RefreshToken (google.protobuf.Empty) returns (RefreshTokenResponse);
+    rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
 }
 
 message LoginRequest {
@@ -26,6 +26,12 @@ message SignupRequest {
     string email = 1;
     string user_name = 2;
     string password = 3;
+}
+
+message RefreshTokenRequest {
+    string token = 1;
+    string refresh_token = 2;
+    string token_type = 3;
 }
 
 message RefreshTokenResponse {
